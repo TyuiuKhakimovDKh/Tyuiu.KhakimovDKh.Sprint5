@@ -1,15 +1,17 @@
 ﻿using System.IO;
 
-using Tyuiu.KhakimovDKh.Sprint5.Task0.V5.Lib;
-namespace Tyuiu.KhakimovDKh.Sprint5.Task0.V5.Test
+using Tyuiu.KhakimovDKh.Sprint5.Task1.V1.Lib;
+
+
+namespace Tyuiu.KhakimovDKh.Sprint5.Task1.V1.Test
 {
     [TestClass]
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidSaveToFileTextData()
         {
-            string path = $@"{Path.GetTempPath()}";
+            string path = @"C:\Users\KhakimovDKh\source\repos\Tyuiu.KhakimovDKh.Sprint5\Tyuiu.KhakimovDKh.Sprint5.Task1.V1\bin\Debug\OutPutFileTask1.txt";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;
@@ -17,3 +19,4 @@ namespace Tyuiu.KhakimovDKh.Sprint5.Task0.V5.Test
         }
     }
 }
+
