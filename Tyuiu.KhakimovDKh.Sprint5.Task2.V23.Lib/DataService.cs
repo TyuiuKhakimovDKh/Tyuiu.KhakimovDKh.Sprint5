@@ -3,9 +3,9 @@ using System.IO;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.KhakimovDKh.Sprint5.Task2.V23.Lib
-{ }
-    public class DataService
-    {
+{}
+public class DataService : ISprint5Task2V23
+{
         public string SaveToFileTextData(int[,] matrix)
         {
             // Генерация пути для сохранения
