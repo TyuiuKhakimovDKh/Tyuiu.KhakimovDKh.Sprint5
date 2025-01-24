@@ -13,22 +13,12 @@ namespace Tyuiu.KhakimovDKh.Sprint5.Task6.V21.Lib
     {
         public int LoadFromDataFile(string path)
         {
-            int count = 0;
-            using (StreamReader reader = new StreamReader(path))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    for (int i = 0; i < line.Length; i++)
-                    {
-                        if (line[i] == 'т' && line[i + 1] == 'т')
-                        {
-                            count++;
-                        }
-                    }
-                }
-            }
-            return count;
+            int res = 0;
+            string text = File.ReadAllText(path);
+            text = text.Replace("тт", "X");
+            text = text.Replace("Тт", "X");
+            res = text.Count(c => c == 'X');
+            return res;
         }
     }
 }
